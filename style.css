@@ -1,0 +1,163 @@
+/* ===== BODY STYLE ===== */
+body{
+    background: linear-gradient(135deg,#0f0f0f,#1a1a1a,#111);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    animation: bgmove 10s infinite alternate;
+}
+
+/* ===== ANIMATED BACKGROUND ===== */
+@keyframes bgmove{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+/* ===== MAIN TITLE ===== */
+h1{
+    font-size: 55px;
+    margin-top: 20px;
+    color: #00ffe5;
+    text-shadow: 0 0 10px cyan,
+                 0 0 20px cyan,
+                 0 0 40px cyan;
+    animation: glow 2s infinite alternate;
+    transform-style: preserve-3d;
+}
+
+@keyframes glow{
+    from{
+        transform: rotateX(0deg);
+        text-shadow: 0 0 10px cyan;
+    }
+    to{
+        transform: rotateX(10deg);
+        text-shadow: 0 0 20px cyan,
+                     0 0 40px cyan,
+                     0 0 80px cyan;
+    }
+}
+
+/* ===== PARAGRAPH ===== */
+p{
+    font-size: 18px;
+    line-height: 1.7;
+    color: #ddd;
+}
+
+/* ===== HR STYLE ===== */
+hr{
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right,transparent,cyan,transparent);
+    margin: 20px 0;
+}
+
+/* ===== GUN CARDS ===== */
+img{
+    border-radius: 20px;
+    border: 3px solid cyan;
+    box-shadow: 0 0 15px cyan;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+/* 3D HOVER EFFECT */
+img:hover{
+    transform: rotateY(15deg) rotateX(10deg) scale(1.1);
+    box-shadow: 0 0 20px cyan,
+                0 0 40px cyan,
+                0 0 80px cyan;
+}
+
+/* ===== BUTTON ===== */
+button{
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg,#00ffe5,#0066ff);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 0 10px cyan;
+}
+
+/* BUTTON HOVER */
+button:hover{
+    transform: scale(1.1) rotate(-2deg);
+    background: linear-gradient(45deg,#0066ff,#00ffe5);
+    box-shadow: 0 0 20px cyan,
+                0 0 40px cyan;
+}
+
+/* ===== HEADINGS ===== */
+h3,h4,h5{
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+    animation: float 3s infinite ease-in-out;
+}
+
+/* FLOATING EFFECT */
+@keyframes float{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* ===== LINKS ===== */
+a{
+    color: #00ffe5;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: white;
+    text-shadow: 0 0 10px cyan;
+}
+
+/* ===== PRICE TEXT ===== */
+pre,b{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* ===== DETAILS BOX ===== */
+p{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+    backdrop-filter: blur(5px);
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: cyan;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: black;
+}
